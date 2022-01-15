@@ -1,0 +1,21 @@
+#!/usr/bin/escript -c
+
+main([]) ->
+   io:format("M : #Processus~nN : #Message~n", []),
+   io:format("Usage: escript -c randomScenario <M> <N>~n", []);
+
+main([_|[]]) ->
+    io:format("M : #Processus~nN : #Message~n", []),
+   io:format("Usage: escript -c randomScenario <M> <N>~ns", []);
+
+main([Mstr, Nstr]) ->
+    M = list_to_integer(Mstr),
+    N = list_to_integer(Nstr),
+    horlogeMatricielle:create_procs(M),
+    timer:sleep(10),
+    horlogeMatricielle:test_random(M, N),
+    horlogeMatricielle:finish();
+
+main(_) ->
+    io:format("M : #Processus~nN : #Message~n", []),
+    io:format("Usage: escript -c randomScenario <M> <N>~n", []).

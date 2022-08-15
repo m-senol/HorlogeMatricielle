@@ -1,5 +1,9 @@
 # MINI-PROJET ERLANG
 
+L'objectif de ce mini-projet est d'implémenter en Erlang l'estampillage matricielle, afin de synchroniser la communication au sein d'un ensemble de processus distribués.
+
+On considère un ensemble de N processus (N étant paramétrable), munis d'horloges matricielles. Chaque fois qu'un processus émet/reçoit un message vers/en provenance des autres processus, il applique le mécanisme de mise à jours et de vérification d'horloge matricielle.
+
 ## Comment Utiliser?
 
 ### 1) scenario1 :
